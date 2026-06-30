@@ -1,0 +1,23 @@
+
+/* style.css */
+
+table th {
+    transition: 0.3s;
+}
+
+table th:hover {
+    background-color: #dbeafe;
+}
+
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(59,130,246,0.5);
+}

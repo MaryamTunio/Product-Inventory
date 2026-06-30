@@ -1,0 +1,133 @@
+
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Inventory Dashboard</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100">
+
+<div class="flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-slate-900 text-white p-6 hidden md:block">
+        <h1 class="text-2xl font-bold mb-8">Admin Panel</h1>
+
+        <ul class="space-y-3">
+            <li class="bg-blue-600 p-3 rounded-lg">Products</li>
+            <li class="hover:bg-slate-800 p-3 rounded-lg cursor-pointer">Dashboard</li>
+            <li class="hover:bg-slate-800 p-3 rounded-lg cursor-pointer">Orders</li>
+            <li class="hover:bg-slate-800 p-3 rounded-lg cursor-pointer">Customers</li>
+            <li class="hover:bg-slate-800 p-3 rounded-lg cursor-pointer">Settings</li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+
+        <div class="bg-white rounded-xl shadow-lg p-6">
+
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+                <h2 class="text-3xl font-bold text-gray-800">
+                    Product Inventory
+                </h2>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search products..."
+                    class="border border-gray-300 rounded-lg px-4 py-2 w-full md:w-72"
+                >
+            </div>
+
+            <div class="overflow-x-auto">
+
+                <table class="w-full border-collapse">
+
+                    <thead>
+                        <tr class="bg-gray-200 text-left">
+                            <th class="p-3 cursor-pointer" onclick="sortTable(0)">ID ↕</th>
+                            <th class="p-3 cursor-pointer" onclick="sortTable(1)">Product Name ↕</th>
+                            <th class="p-3 cursor-pointer" onclick="sortTable(2)">Category ↕</th>
+                            <th class="p-3 cursor-pointer" onclick="sortTable(3)">Price ↕</th>
+                            <th class="p-3 cursor-pointer" onclick="sortTable(4)">Stock ↕</th>
+                            <th class="p-3">Status</th>
+                            <th class="p-3">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tableBody">
+
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-3">1</td>
+                            <td class="p-3">iPhone 15</td>
+                            <td class="p-3">Electronics</td>
+                            <td class="p-3 editable">$999</td>
+                            <td class="p-3 editable">25</td>
+                            <td class="p-3">
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Active</span>
+                            </td>
+                            <td class="p-3">
+                                <button onclick="editRow(this)" class="bg-blue-600 text-white px-4 py-1 rounded">
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-3">2</td>
+                            <td class="p-3">Nike Hoodie</td>
+                            <td class="p-3">Clothing</td>
+                            <td class="p-3 editable">$59</td>
+                            <td class="p-3 editable">50</td>
+                            <td class="p-3">
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Active</span>
+                            </td>
+                            <td class="p-3">
+                                <button onclick="editRow(this)" class="bg-blue-600 text-white px-4 py-1 rounded">
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-3">3</td>
+                            <td class="p-3">Office Chair</td>
+                            <td class="p-3">Furniture</td>
+                            <td class="p-3 editable">$120</td>
+                            <td class="p-3 editable">12</td>
+                            <td class="p-3">
+                                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">Low Stock</span>
+                            </td>
+                            <td class="p-3">
+                                <button onclick="editRow(this)" class="bg-blue-600 text-white px-4 py-1 rounded">
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
