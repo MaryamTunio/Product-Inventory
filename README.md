@@ -11,7 +11,7 @@ A sleek, responsive, and interactive Admin Panel dashboard for managing product 
 
 ## 📁 Repository Blueprint
 
-```text
+
 ├── index.html     # Semantic UI skeleton integrated with Tailwind CDN scripts
 ├── script.js      # Core logical engine controlling sorting, search lookups, and DOM mutation states
 └── style.css      # Extensible fallback stylesheet container for specialized custom layout modifications
